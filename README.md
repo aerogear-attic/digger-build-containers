@@ -1,5 +1,9 @@
 # AeroGear Digger Build Containers
 
+[![](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/aerogear/mobile-sdk/)
+[![Docker Stars](https://img.shields.io/docker/stars/aerogear/mobile-sdk.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/aerogear/mobile-sdk/stars/count/)
+[![Docker pulls](https://img.shields.io/docker/pulls/aerogear/mobile-sdk.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/aerogear/mobile-sdk/)
+
 [![Build Status](https://travis-ci.org/aerogear/digger-build-containers.png)](https://travis-ci.org/aerogear/digger-build-containers)
 [![License](https://img.shields.io/:license-Apache2-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
