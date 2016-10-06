@@ -1,8 +1,10 @@
 # AeroGear Digger Build Containers
 
+[![Build Status](https://travis-ci.org/aerogear/digger-build-containers.png)](https://travis-ci.org/aerogear/digger-build-containers)
+[![License](https://img.shields.io/:license-Apache2-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+
 Building mobile applications inside a Linux container has benefits of a true isolation, for each build. This repository contains Docker-formatted container images for building supported mobile platforms:
 * Android SDK
-
 
 ## Prerequisites
 
