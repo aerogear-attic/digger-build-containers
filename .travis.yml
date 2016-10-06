@@ -2,6 +2,9 @@ sudo: required
 services:
   - docker
 
+notifications:
+  irc: "irc.freenode.org#aerogear"
+
 script:
   - cd 0.1
-  - docker build -t aerogear-travis/mobile-sdk:0.1 . 
+  - docker build -t aerogear-travis/mobile-sdk . 
