@@ -40,7 +40,7 @@ _NOTE:_ Currently we have no images on Docker Hub....
 With the prerequisites being fulfilled, it's time to build the _Build container_. Go to the `0.1` folder and execute:
 
 ```
-docker build -t aerogear/mobile-sdk:0.1 . 
+docker build -t aerogear/mobile-sdk . 
 ```
 
 ## Building an App inside of a Linux container
@@ -48,7 +48,11 @@ docker build -t aerogear/mobile-sdk:0.1 .
 Last but not least you need a folder containing the source code of your (Android) mobile application, the following command runs a build inside of a Linux container, using the above containers and volumes:
 
 ```
-docker run -it -v /path/to/my/android-app/:/app --volumes-from my-android-volume -e AG_MOBILE_SDK=/opt/android-sdk-linux -e ANDROID_HOME=/opt/android-sdk-linux -e PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mobile-sdk/tools:/opt/android-sdk-linux/tools aerogear/mobile-sdk:0.1 build
+docker run -it -v /path/to/my/android-app/:/app --volumes-from my-android-volume \
+   -e AG_MOBILE_SDK=/opt/android-sdk-linux \
+   -e ANDROID_HOME=/opt/android-sdk-linux \
+   -e PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mobile-sdk/tools:/opt/android-sdk-linux/tools \
+   aerogear/mobile-sdk build
 
 ```
 
