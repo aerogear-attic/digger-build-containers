@@ -1,0 +1,18 @@
+#!/bin/bash
+
+#utility script to help select android packages to be installed in the host machine that is not being used in the container
+
+function join {
+  local IFS="$1";
+  shift; echo "$*";
+}
+
+arr=(`android list sdk -a --extended | grep -oh 'build-tools\-\([0-9]\+\).\([0-9]\+\).\([0-9]\+\)'`)
+
+BUILD=$(IFS=, ; echo "${arr[*]}")
+SDK="android-17,android-18,android-19,android-20,android-21,android-22,android-23,android-24"
+EXTRA="extra-android-support,extra-android-m2repository,extra-google-m2repository,extra-google-google_play_services"
+PLATFORM="tools,platform-tools"
+
+android update sdk --filter $EXTRA,$PLATFORM,$BUILD,$SDK --no-ui --force --all
+

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+alias python=python3.4
+alias pip=pip3.4
+
+pip install git+ssh://git@github.com/aerogear/digger-build-cli.git
+
