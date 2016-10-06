@@ -55,13 +55,6 @@ RUN yum -y install nodejs
 # install Cordova CLI
 RUN npm install -g cordova@6
 
-#add cli certificate
-RUN  mkdir /root/.ssh
-COPY id_rsa /root/.ssh
-RUN chmod 600 /root/.ssh/id_rsa
-RUN touch /root/.ssh/known_hosts
-RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
-
 #install cli
 RUN /opt/tools/install-cli
 
