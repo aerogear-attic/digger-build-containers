@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - cd 0.1
+  - docker build -t aerogear-travis/mobile-sdk:0.1 . 
