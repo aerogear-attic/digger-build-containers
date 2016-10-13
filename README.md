@@ -21,7 +21,7 @@ First you need a _Platform container_, which provides the desired mobile platfor
 
 #### Android Platform container
 
-For Android you can use the containers provided by [@appunite](https://github.com/appunite/docker). The project has images on [Docker Hub](https://hub.docker.com/r/jacekmarchwicki/android/tags/), but you can build them locally as well.
+For our Android (and Cordova-Android) testing we have used containers provided by [@appunite](https://github.com/appunite/docker). The project has images on [Docker Hub](https://hub.docker.com/r/jacekmarchwicki/android/tags/), but you can build them locally as well.
 
 ### Platform volume
 
@@ -49,7 +49,7 @@ docker build -t aerogear/mobile-sdk .
 Last but not least you need a folder containing the source code of your (Android) mobile application, the following command runs a build inside of a Linux container, using the above containers and volumes:
 
 ```
-docker run -it -v /path/to/my/android-app/:/app --volumes-from my-android-volume \
+docker run -it -v /path/to/my/android_or_cordova-app/:/app:z --volumes-from my-android-volume \
    -e AG_MOBILE_SDK=/opt/android-sdk-linux \
    -e ANDROID_HOME=/opt/android-sdk-linux \
    -e PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mobile-sdk/tools:/opt/android-sdk-linux/tools \
@@ -62,6 +62,7 @@ docker run -it -v /path/to/my/android-app/:/app --volumes-from my-android-volume
 We have tested a few (Android) applications that work with our _Build container_:
 
 * [The FeedHenry Android template apps](https://github.com/feedhenry-templates?utf8=%E2%9C%93&query=android)
+* [The FeedHenry Cordova template apps](https://github.com/feedhenry-templates?utf8=%E2%9C%93&query=cordova-app)
 * [Google IO Schedule App](https://github.com/matzew/iosched/tree/changes)
 * [DevNexus App](https://github.com/matzew/devnexus-android/tree/dummy-google-services)
 * [Memory Game](https://github.com/sromku/memory-game) _random Gradle based OSS project/game_
