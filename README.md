@@ -9,6 +9,7 @@
 
 Building mobile applications inside a Linux container has benefits of a true isolation, for each build. This repository contains Docker-formatted container images for building supported mobile platforms:
 * Android SDK
+* Apache Cordova CLI (Version 6)
 
 ## Prerequisites
 
