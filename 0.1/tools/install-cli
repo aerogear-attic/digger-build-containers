@@ -3,4 +3,4 @@
 alias python=python3.4
 alias pip=pip3.4
 
-pip install https://github.com/aerogear/digger-build-cli/archive/0.2.0.zip
+pip install https://github.com/aerogear/digger-build-cli/archive/0.3.0.zip
