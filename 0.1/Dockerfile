@@ -17,7 +17,11 @@ ARG KS_PATH=/etc/digger
 ARG KS_STOREPASS=android
 ARG KS_KEYPASS=android
 
+#gradle cache folder
+RUN mkdir /gradle-cache
+
 #env vars
+ENV GRADLE_USER_HOME=/gradle-cache
 ENV AG_MOBILE_SDK /opt/mobile-sdk
 ENV JAVA_HOME /etc/alternatives/java_sdk_1.8.0
 ENV ANDROID_HOME ${AG_MOBILE_SDK}
@@ -65,7 +69,7 @@ VOLUME /opt/mobile-sdk
 #android tools
 ENV PATH ${PATH}:${AG_MOBILE_SDK}/tools
 
-#default keystore:q
+#default keystore
 RUN mkdir -p /etc/digger
 RUN /opt/tools/gen-keystore ${KS_ALIAS} ${KS_NAME} ${KS_UNIT} ${KS_ORG} ${KS_LOC} ${KS_STATE} ${KS_COUNTRY} ${KS_PATH} ${KS_STOREPASS} ${KS_KEYPASS}
 
