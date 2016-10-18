@@ -11,6 +11,19 @@ Building mobile applications inside a Linux container has benefits of a true iso
 * Android SDK
 * Apache Cordova CLI (Version 6)
 
+## Project Info
+
+|                 | Project Info  |
+| --------------- | ------------- |
+| License:        | Apache License, Version 2.0  |
+| Build:          | Docker  |
+| Documentation:  | tbd  |
+| Issue tracker:  | https://issues.jboss.org/browse/AGDIGGER  |
+| Mailing lists:  | [aerogear-users](http://aerogear-users.1116366.n5.nabble.com/) ([subscribe](https://lists.jboss.org/mailman/listinfo/aerogear-users))  |
+|                 | [aerogear-dev](http://aerogear-dev.1069024.n5.nabble.com/) ([subscribe](https://lists.jboss.org/mailman/listinfo/aerogear-dev))  |
+| IRC:            | [#aerogear](https://webchat.freenode.net/?channels=aerogear) channel in the [freenode](http://freenode.net/) network.  |
+
+
 ## Prerequisites
 
 The following gives a quick introduction, how to get started using our _AeroGear Digger Build Containers_!
