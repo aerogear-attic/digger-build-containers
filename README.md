@@ -1,5 +1,7 @@
 # AeroGear Digger Build Containers
 
+**_Deprecated:_** This repository is deprecated and no longer maintained!
+
 [![](https://img.shields.io/docker/automated/jrottenberg/ffmpeg.svg)](https://hub.docker.com/r/aerogear/mobile-sdk/)
 [![Docker Stars](https://img.shields.io/docker/stars/aerogear/mobile-sdk.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/aerogear/mobile-sdk/stars/count/)
 [![Docker pulls](https://img.shields.io/docker/pulls/aerogear/mobile-sdk.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/aerogear/mobile-sdk/)
