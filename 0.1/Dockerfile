@@ -59,6 +59,13 @@ RUN yum -y install nodejs
 # install Cordova CLI
 RUN npm install -g cordova@6
 
+# install Ceylon SDK
+RUN  wget -O /etc/pki/rpm-gpg/RPM-GPG-KEY-ceylon https://downloads.ceylon-lang.org/rpm/ceylon-rpm-repo.gpg.key && \
+    rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-ceylon && \
+    yum-config-manager --add-repo https://downloads.ceylon-lang.org/rpm/ceylon.repo && \
+    yum clean all && \
+    yum install -y ceylon-1.3.0
+
 #install cli
 RUN /opt/tools/install-cli
 
